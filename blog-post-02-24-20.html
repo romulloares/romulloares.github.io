@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Criando comandos no seu bash</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+</head> 
+
+<body>
+    
+        <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Romulloares</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Decidi voltar com este projeto é desta vez seguir certinho, se achar algum BUG ou algo assim reporte, por favor! Valeu e boa leitura kakaka<br><a href="about.html"></a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://linkedin.com/romulloares/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/romulloares/"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://stackoverflow.com/users/9229964/romulo-soares"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.instagram.com/_romuloares/"><i class="fab fa-instagram fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/Romulloares"><i class="fab fa-twitter fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item active">
+					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>Sobre Mim</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+    </header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Criando comandos no seu bash</h2>
+				    <div class="meta mb-3"><span class="date">24/02/2020 - 20h00</span><span class="time">Alguém leu nos últimos 5 minutos</span><span class="comment"><a href="#">0 comments</a></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href="https://devrant.com/rants/729089/if-you-leave-your-linux-system-open-and-your-troll-friend-finds-out"><img class="img-fluid" src="assets/images/blog/blog-post-banner-2.jpg" alt="image"></a>
+				        <figcaption class="mt-2 text-center image-caption">Pic: <a>Uma das minhas aplicações deste recurso! rs</a></figcaption>
+				    </figure>
+				    <p>Oi, enfim voltei com meu blog, vou tentar fazer um post por semana dessa vez, para ficar mais organizado.
+                       E também para conseguir cumprir uma meta pessoal minha, que atribui a este projeto! O que fiz durante esse tempo? 
+                       Bem, me formei, consegui realizar alguns objetivos, fiz alguns roles legais, conheci gente nova e coloquei algumas coisas em dia.</p>
+				    <p>Nesse meio tempo também troquei meu computador de trabalho agora estou com um ASUS com uma configuração invejável (32 RAM, 2 TB SSD, Processador I7, e outras coisas mais).
+Formatei ele e fiz um dual boot com CentOS 8 e Windows 10, quando fui realizar meu primeiro acesso remoto,
+ás teclas não estavam respondendo ao o que estava correspondente nelas exemplo o ":" na verdade estava representando a letra Ç e muitas outras teclas aconteciam a mesma coisa.
+Obviamente, o layout do teclado estava em ABNT (pt-br) e agora eu tinha um teclado em formato americano. Deixei uma <a href="https://www.techtudo.com.br/dicas-e-tutoriais/noticia/2015/07/como-ajustar-o-layout-do-teclado-do-windows-10-para-portugues-abnt.html">configuração</a> adicionada na barra de tarefas e segui a vida.</p>
+				    <p>A mesma coisa acontecia no CentOS, mas quando estou com este sistema operacional acho chato fazer as coisas na interface, por alguns motivos em especial,
+o principal deles e que me forcei a aprender a utilizar o CLI e ainda sim tem muitos comandos que não conheço ou não utilizo da maneira correta.
+Com uma pesquisa rápida no Google vi que tinha como setar o idioma inglês para sistema operacional identificar isso. Com a ferramenta <a href = "https://wiki.archlinux.org/index.php/Linux_console_(Portugu%C3%AAs)/Keyboard_configuration_(Portugu%C3%AAs)">set-keymap<a/> isso era possível.
+Tive que passar para o US international por conta dos acentos na nossa língua e na configuração de English US não identificava os acentos.
+Por fim achei interessante criar uma função para aquele comando, toda a hora ficar setkey... Perdia um tempo que não era interessante para mim.
+Mas como podemos adicionar funções ou comandos? Para isso temos que mapear esta tarefa, vamos utilizar o case do teclado.<p/>
+					<h5 class="my-3">Passo a passo para resolver o problema:</h5>
+				    <ul class="mb-5">
+					  <li class="mb-2">Criar um nome</li>
+					  <li class="mb-2">Verificar o comando correspondente </li>
+					  <li class="mb-2">Adicionar a mudanca arquivo ~/.bashrc</li>
+					  <li class="mb-2">Carregar as configuracoes e atribuir elas</li>
+					</ul>
+<p>No meu caso defini como rsSetKeyboard (rs = Romulo Soares e Set Keyboard fica meio obvio né?)</p>
+<p>Beleza, agora que já temos isso precisamos definir, achar o que precisamos fazer para que este comando responda do jeito que queremos isso é simples usamos o set-keymap para isso:<p/>
+					<pre>
+					    <code>
+sudo set-keymap us-intl
+					    </code>
+				    </pre>
+				    <p>Okay agora é só adicionar no ~/.bashrc, correto? Mas o que diabos é este arquivo? E por que precisamos adicionar nele? O arquivo .bashrc é sempre executado quando abrimos uma nova sessão do terminal,
+ele é o responsável por carregar as configurações da nossa sessão do terminal. Geralmente este arquivo está no /home/user/, mas você pode localizar o mesmo usando o comando:</p>
+				    <pre>
+					    <code>
+sudo find -name .bashrc
+					    </code>
+				    </pre>
+					<p>Com o caminho em mãos podemos acessar com nosso editor de preferencia, eu gosto do <a href ="https://www.vim.org/">VIM<a/> em outro post explico o porque:<p/>
+<pre>
+					    <code>
+vim /home/user/.bashrc
+					    </code>
+				    </pre>
+					<p>Por fim, podemos criar um ALIAS com o nosso comando, ele nada mais é do que um apelido que estamos colocamos em uma determinada serie de comandos para facilitar nossa vida, então no final do arquivo, vamos colocar a seguinte linha:<p/>
+					<pre>
+					    <code>
+alias rsSetKeyboard = 'setxkbmap -model pc104 -layout us_intl'
+					    </code>
+				    </pre>
+					<p> Salvamos o arquivo e para carregar nossas mudanças, colocamos:<p/>
+					<pre>
+					    <code>
+source /home/user/.bashrc
+					    </code>
+				    </pre>
+
+<p> Isso vai fazer com que nossa configuração seja recarregada com a mais nova alteração que fizemos. 
+Temos vários exemplos na internet de diversos comandos interessante e apelidos criados com essa estratégia, meu <a href="https://raw.githubusercontent.com/romulloares/dotfiles/master/bashrc">bashrc<a/> pessoal é este:
+Por fim agora posso usar meu computador novo, sem problema algum. E você quais problemas resolveria com isso? <p/>
+
+<p>Até mais!<p/>
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="https://romulloares.github.io/blog-post-11-19-19.html">Voltar<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right">Proximo<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				<script>
+</script>
+				<div class="blog-comments-section">
+					<div id="disqus_thread"></div>
+					<script>
+					    /**
+					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+					     *  PLATFORM OR CMS.
+					     *  
+					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+					     *  https://disqus.com/admin/universalcode/#configuration-variables
+					     */
+					    /*
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = PAGE_URL;  
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = PAGE_IDENTIFIER; 
+					    };
+					    */
+					    
+					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+					        var d = document, s = d.createElement('script');
+					        
+					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
+					        s.src = 'https://3wmthemes.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+						<script id="dsq-count-scr" src="//romulloares-github-io.disqus.com/count.js" async></script>
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+	    
+
+    </div><!--//main-wrapper-->   
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>   
+</body>
+</html> 
+
