@@ -19,7 +19,7 @@
 
 <body>
     
-        <header class="header text-center">	    
+    <header class="header text-center">	    
 	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Romulloares</a></h1>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
@@ -32,11 +32,11 @@
 				<div class="profile-section pt-3 pt-lg-0">
 				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
 					
-					<div class="bio mb-3">Oi, este é o primeiro post desse projeto ás coisas ainda estão um pouco betas aqui saca? Se achar algum BUG me chama! Boa leitura!<br><a href="about.html"></a></div><!--//bio-->
+					<div class="bio mb-3">Oi, este é o meu primeiro post, logo as coisas estão um pouco BETAS, se achar algum erro me chame!<br><a href="about.html"></a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="https://linkedin.com/romulloares/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://github.com/romulloares/"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://stackoverflow.com/users/9229964/romulo-soares"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://open.spotify.com/user/jvudmsuepwvwbbrqinm0x0p6a?si=PRVeUaUJRV6NH09It_GSeg"><i class="fab fa-spotify fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.instagram.com/_romuloares/"><i class="fab fa-instagram fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="https://twitter.com/Romulloares"><i class="fab fa-twitter fa-fw"></i></a></li>
 			        </ul><!--//social-list-->
@@ -44,8 +44,17 @@
 				</div><!--//profile-section-->
 				
 				<ul class="navbar-nav flex-column text-left">
-					<li class="nav-item active">
+					<li class="nav-item">
 					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="100daysofcoding.html"><i class="fas fa-desktop fa-fw mr-2"></i>#100daysofcoding</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="100daysofenglish.html"><i class="fas fa-book fa-fw mr-2"></i>#100daysofenglish</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="100daysofukulele.html"><i class="fas fa-guitar fa-fw mr-2"></i>#100daysofukulele</a>
 					</li>
 					<li class="nav-item">
 					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>Sobre Mim</a>
@@ -54,7 +63,6 @@
 			</div>
 		</nav>
     </header>
-    
     <div class="main-wrapper">
 	    
 	    <article class="blog-post px-3 py-5 p-md-5">
@@ -123,41 +131,24 @@ sshpass -p 'password' scp /users/meuusuario/desktop/faixas/tudo-em-mp3.zip root@
 				<div class="blog-comments-section">
 					<div id="disqus_thread"></div>
 					<script>
-					    /**
-					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-					     *  PLATFORM OR CMS.
-					     *  
-					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-					     *  https://disqus.com/admin/universalcode/#configuration-variables
-					     */
-					    /*
-					    var disqus_config = function () {
-					        // Replace PAGE_URL with your page's canonical URL variable
-					        this.page.url = PAGE_URL;  
-					        
-					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					        this.page.identifier = PAGE_IDENTIFIER; 
-					    };
-					    */
-					    
-					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-					        var d = document, s = d.createElement('script');
-					        
-					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
-					        s.src = 'https://3wmthemes.disqus.com/embed.js';
-					        
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					</script>
-					<noscript>
-					    Please enable JavaScript to view the 
-						<script id="dsq-count-scr" src="//romulloares-github-io.disqus.com/count.js" async></script>
-					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-					        comments powered by Disqus.
-					    </a>
-					</noscript>
+
+						/**
+						*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+						var disqus_config = function () {
+						this.page.url = '{{content.absolut_url}}';  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = '{{content_id}}' // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://https-romulloares-github-io.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+						</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				</div><!--//blog-comments-section-->
 				
 		    </div><!--//container-->
