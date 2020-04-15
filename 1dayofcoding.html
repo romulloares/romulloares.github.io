@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en"> 
 <head>
     <title>1# dia - Indo codar... </title>
     
-    <!-- Meta -->
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico"> 
     
-    <!-- FontAwesome JS-->
+    
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
     
-    <!-- Theme CSS -->  
+   
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
 
 </head> 
@@ -39,9 +39,9 @@
 			            <li class="list-inline-item"><a href="https://open.spotify.com/user/jvudmsuepwvwbbrqinm0x0p6a?si=PRVeUaUJRV6NH09It_GSeg"><i class="fab fa-spotify fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.instagram.com/_romuloares/"><i class="fab fa-instagram fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="https://twitter.com/Romulloares"><i class="fab fa-twitter fa-fw"></i></a></li>
-			        </ul><!--//social-list-->
+			        </ul>
 			        <hr> 
-				</div><!--//profile-section-->
+				</div>
 				
 				<ul class="navbar-nav flex-column text-left">
 					<li class="nav-item">
@@ -98,41 +98,26 @@ destes 100 dias os 10 primeiros serão para me preparar (IF,FOR,SWITCH CASE,TRY 
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
 				  <a class="nav-link-prev nav-item nav-link rounded-left" href="#">Voltar<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right">Proximo<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="2dayofcoding.html">Proximo<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				<script>
 </script>
 				<div class="blog-comments-section">
 					<div id="disqus_thread"></div>
 					<script>
-					    /**
-					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-					     *  PLATFORM OR CMS.
-					     *  
-					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-					     *  https://disqus.com/admin/universalcode/#configuration-variables
-					     */
-					    /*
-					    var disqus_config = function () {
-					        // Replace PAGE_URL with your page's canonical URL variable
-					        this.page.url = PAGE_URL;  
-					        
-					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					        this.page.identifier = PAGE_IDENTIFIER; 
-					    };
-					    */
-					    
-					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-					        var d = document, s = d.createElement('script');
-					        
-					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
-					        s.src = 'https://3wmthemes.disqus.com/embed.js';
-					        
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					</script>
+
+						var disqus_config = function () {
+						this.page.url = '{{content.absolut_url}}';  
+						this.page.identifier = '{{content_id}}' 
+						};
+
+						(function() { 
+						var d = document, s = d.createElement('script');
+						s.src = 'https://https-romulloares-github-io.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+						</script>
 					<noscript>
 					    Please enable JavaScript to view the 
 						<script id="dsq-count-scr" src="//romulloares-github-io.disqus.com/count.js" async></script>
@@ -140,22 +125,22 @@ destes 100 dias os 10 primeiros serão para me preparar (IF,FOR,SWITCH CASE,TRY 
 					        comments powered by Disqus.
 					    </a>
 					</noscript>
-				</div><!--//blog-comments-section-->
+				</div>
 				
-		    </div><!--//container-->
+		    </div>
 	    </article>
 	    
 
-    </div><!--//main-wrapper-->   
-    <!-- Javascript -->          
+    </div>
+    
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
     <script src="assets/plugins/popper.min.js"></script> 
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
     
-    <!-- Page Specific JS -->
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
 
-    <!-- Custom JS -->
+    
     <script src="assets/js/blog.js"></script>   
 </body>
 </html> 
